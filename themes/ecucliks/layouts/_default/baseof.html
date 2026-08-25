@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ block "title" . }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+    <link rel="icon" type="image/jpeg" href="{{ "favicon.jpg" | relURL }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
     <!-- Google AdSense -->
     {{ if site.Params.adsense_client_id }}
@@ -18,8 +19,8 @@
     <header class="site-header">
         <div class="container header-inner">
             <a href="{{ "/" | relURL }}" class="logo">
-                <span class="logo-icon">🇪🇨</span>
-                <span class="logo-text">Ecu<span class="logo-accent">clicks</span></span>
+                <img src="{{ "favicon.jpg" | relURL }}" alt="Ecuclicks" class="logo-img">
+                <span class="logo-text"><span class="logo-ecu">Ecu</span><span class="logo-clicks">clicks</span></span>
             </a>
             <button class="mobile-menu-toggle" aria-label="Menú">
                 <span></span><span></span><span></span>
@@ -55,11 +56,18 @@
             
             <aside class="sidebar">
                 <div class="widget categories-widget">
-                    <h3>📂 Categorías</h3>
+                    <h3>Categorías</h3>
                     <ul>
                         {{ range $name, $taxonomy := site.Taxonomies.categories }}
                         <li>
                             <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">
+                                {{ if eq $name "identificacion" }}<span class="cat-icon">🪪</span>{{ end }}
+                                {{ if eq $name "impuestos" }}<span class="cat-icon">🧾</span>{{ end }}
+                                {{ if eq $name "seguridad social" }}<span class="cat-icon">🏥</span>{{ end }}
+                                {{ if eq $name "vehiculos" }}<span class="cat-icon">🚗</span>{{ end }}
+                                {{ if eq $name "extranjeria" }}<span class="cat-icon">✈️</span>{{ end }}
+                                {{ if eq $name "empresas" }}<span class="cat-icon">🏢</span>{{ end }}
+                                {{ if eq $name "otros" }}<span class="cat-icon">📋</span>{{ end }}
                                 <span class="cat-name">{{ $name | humanize }}</span>
                                 <span class="cat-count">{{ len $taxonomy }}</span>
                             </a>
@@ -74,8 +82,9 @@
                 </div>
 
                 <div class="widget info-widget">
-                    <h3>ℹ️ Sobre Ecuclicks</h3>
+                    <h3>Sobre Ecuclicks</h3>
                     <p>Portal informativo con guías paso a paso para realizar trámites en Ecuador. Contenido actualizado periódicamente.</p>
+                    <p class="widget-disclaimer">⚠️ Información de referencia, no oficial.</p>
                 </div>
             </aside>
         </div>
@@ -84,9 +93,11 @@
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="footer-brand">
-                <span class="logo-icon">🇪🇨</span>
-                <span class="logo-text">Ecu<span class="logo-accent">clicks</span></span>
-                <p>Guías informativas no oficiales. La información puede cambiar sin previo aviso.</p>
+                <a href="{{ "/" | relURL }}" class="logo footer-logo">
+                    <img src="{{ "favicon.jpg" | relURL }}" alt="Ecuclicks" class="logo-img">
+                    <span class="logo-text"><span class="logo-ecu">Ecu</span><span class="logo-clicks">clicks</span></span>
+                </a>
+                <p>Tu portal de guías y trámites en Ecuador. Información actualizada sobre Registro Civil, SRI, IESS, ANT y más.</p>
             </div>
             <div class="footer-links">
                 <h4>Categorías</h4>
@@ -97,13 +108,12 @@
                 </ul>
             </div>
             <div class="footer-copy">
-                <p>&copy; {{ now.Format "2006" }} {{ site.Title }}. Todos los derechos reservados.</p>
+                <p>&copy; {{ now.Format "2006" }} Ecuclicks. Guías informativas no oficiales. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
         document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
             this.classList.toggle('active');
             document.querySelector('.main-nav').classList.toggle('open');
