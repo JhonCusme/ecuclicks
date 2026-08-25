@@ -13,11 +13,11 @@ Nos encantaría escucharte. Ecuclicks se construye gracias a la retroalimentaci�
 
 ### Cómo escribirnos
 
-Puedes ponerte en contacto con nuestro equipo editorial enviando un correo electrónico a:
+La forma más rápida de comunicarte con nuestro equipo es a través de WhatsApp. Si necesitas asesoría o quieres reportar algún cambio en un trámite, escríbenos directamente:
 
-**✉️ [info@ecuclicks.online](mailto:info@ecuclicks.online)**
+**[💬 Clic aquí para chatear por WhatsApp](https://wa.me/593979679001)**
 
-*Intentamos responder a todos los mensajes en un plazo de 48 a 72 horas hábiles.*
+*Intentamos responder a todos los mensajes lo más pronto posible.*
 
 ### Aclaración Importante
 
