@@ -1,20 +1,33 @@
+{{ define "title" }}{{ .Title }} | {{ site.Title }}{{ end }}
 {{ define "main" }}
 <section class="archive">
     <header class="archive-header">
+        <div class="post-breadcrumb">
+            <a href="{{ "/" | relURL }}">Inicio</a>
+            <span class="sep">/</span>
+            <span>{{ .Title }}</span>
+        </div>
         <h1>{{ .Title }}</h1>
         {{ with .Content }}
         <div class="archive-description">{{ . }}</div>
         {{ end }}
+        <p class="archive-count">{{ len .Pages }} guías disponibles</p>
     </header>
 
     <div class="guide-grid">
         {{ range .Pages }}
         <article class="guide-card">
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            <div class="meta">
-                <span>Actualizado: {{ .Lastmod.Format "02/01/2006" }}</span>
+            <div class="card-category">
+                {{ with .Params.categories }}
+                <span class="category-badge">{{ index . 0 | humanize }}</span>
+                {{ end }}
             </div>
-            <p>{{ .Summary | truncate 120 }}</p>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="card-excerpt">{{ .Summary | plainify | truncate 110 }}</p>
+            <div class="card-footer">
+                <span class="card-date">🕐 {{ .Lastmod.Format "02/01/2006" }}</span>
+                <a href="{{ .RelPermalink }}" class="card-link">Leer guía →</a>
+            </div>
         </article>
         {{ end }}
     </div>

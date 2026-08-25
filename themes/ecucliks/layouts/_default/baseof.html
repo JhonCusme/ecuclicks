@@ -3,57 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ block "title" . }}{{ site.Title }}{{ end }}</title>
+    <title>{{ block "title" . }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-    <!-- Google AdSense Auto Ads Placeholder -->
+    <!-- Google AdSense -->
     {{ if site.Params.adsense_client_id }}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.Params.adsense_client_id }}" crossorigin="anonymous"></script>
     {{ end }}
 </head>
 <body>
     <header class="site-header">
-        <div class="container">
-            <a href="{{ "/" | relURL }}" class="logo">{{ site.Title }}</a>
-            <nav>
+        <div class="container header-inner">
+            <a href="{{ "/" | relURL }}" class="logo">
+                <span class="logo-icon">🇪🇨</span>
+                <span class="logo-text">Ecu<span class="logo-accent">clicks</span></span>
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="{{ "/categories/" | relURL }}">Trámites por Categoría</a></li>
+                    <li><a href="{{ "/" | relURL }}">Inicio</a></li>
+                    <li class="nav-dropdown">
+                        <a href="{{ "/categories/" | relURL }}">Categorías ▾</a>
+                        <ul class="dropdown-menu">
+                            {{ range $name, $taxonomy := site.Taxonomies.categories }}
+                            <li><a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">{{ $name | humanize }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- AdSense Header Placeholder -->
-    <div class="ad-placeholder ad-header">
-        <!-- Espacio reservado para Banner Horizontal Superior -->
+    <!-- AdSense Header -->
+    <div class="ad-slot ad-header">
+        <div class="container">
+            <!-- AdSense Banner Horizontal Superior -->
+        </div>
     </div>
 
-    <main class="site-main container layout-sidebar">
-        <div class="content-area">
-            {{ block "main" . }}{{ end }}
+    <main class="site-main">
+        <div class="container layout-wrapper">
+            <div class="content-area">
+                {{ block "main" . }}{{ end }}
+            </div>
+            
+            <aside class="sidebar">
+                <div class="widget categories-widget">
+                    <h3>📂 Categorías</h3>
+                    <ul>
+                        {{ range $name, $taxonomy := site.Taxonomies.categories }}
+                        <li>
+                            <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">
+                                <span class="cat-name">{{ $name | humanize }}</span>
+                                <span class="cat-count">{{ len $taxonomy }}</span>
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                
+                <!-- AdSense Sidebar -->
+                <div class="ad-slot ad-sidebar">
+                    <!-- AdSense Banner Sidebar -->
+                </div>
+
+                <div class="widget info-widget">
+                    <h3>ℹ️ Sobre Ecuclicks</h3>
+                    <p>Portal informativo con guías paso a paso para realizar trámites en Ecuador. Contenido actualizado periódicamente.</p>
+                </div>
+            </aside>
         </div>
-        
-        <aside class="sidebar">
-            <div class="widget">
-                <h3>Categorías</h3>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-icon">🇪🇨</span>
+                <span class="logo-text">Ecu<span class="logo-accent">clicks</span></span>
+                <p>Guías informativas no oficiales. La información puede cambiar sin previo aviso.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Categorías</h4>
                 <ul>
                     {{ range $name, $taxonomy := site.Taxonomies.categories }}
                     <li><a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">{{ $name | humanize }}</a></li>
                     {{ end }}
                 </ul>
             </div>
-            
-            <!-- AdSense Sidebar Placeholder -->
-            <div class="ad-placeholder ad-sidebar widget">
-                <!-- Espacio reservado para Banner Vertical o Cuadrado Sidebar -->
+            <div class="footer-copy">
+                <p>&copy; {{ now.Format "2006" }} {{ site.Title }}. Todos los derechos reservados.</p>
             </div>
-        </aside>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; {{ now.Format "2006" }} {{ site.Title }}. Guías informativas no oficiales.</p>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.main-nav').classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

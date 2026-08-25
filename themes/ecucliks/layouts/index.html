@@ -1,27 +1,59 @@
+{{ define "title" }}{{ site.Title }} - Guías y Trámites de Ecuador{{ end }}
 {{ define "main" }}
 <section class="home-hero">
-    <h1>Bienvenido a Ecucliks</h1>
-    <p>{{ site.Params.description }}</p>
+    <div class="hero-content">
+        <h1>Tu guía paso a paso para <span class="hero-highlight">trámites en Ecuador</span></h1>
+        <p class="hero-subtitle">Requisitos, costos y pasos actualizados para cédula, RUC, IESS, licencias, pasaporte y más. Todo en un solo lugar.</p>
+        <div class="hero-search">
+            <div class="search-categories">
+                {{ range $name, $taxonomy := site.Taxonomies.categories }}
+                <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}" class="category-pill">
+                    {{ if eq $name "identificacion" }}🪪{{ end }}
+                    {{ if eq $name "impuestos" }}🧾{{ end }}
+                    {{ if eq $name "seguridad social" }}🏥{{ end }}
+                    {{ if eq $name "vehiculos" }}🚗{{ end }}
+                    {{ if eq $name "extranjeria" }}✈️{{ end }}
+                    {{ if eq $name "empresas" }}🏢{{ end }}
+                    {{ if eq $name "otros" }}📋{{ end }}
+                    {{ $name | humanize }}
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
 </section>
 
+<!-- AdSense In-Content -->
+<div class="ad-slot ad-content-home">
+    <!-- AdSense Banner debajo del hero -->
+</div>
+
 <section class="recent-guides">
-    <h2>Guías Más Recientes</h2>
+    <div class="section-header">
+        <h2>📖 Guías Más Recientes</h2>
+        <p>Trámites y procedimientos actualizados para que no pierdas tiempo</p>
+    </div>
     <div class="guide-grid">
         {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
         {{ range $paginator.Pages }}
         <article class="guide-card">
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            <div class="meta">
-                <span>Actualizado: {{ .Lastmod.Format "02/01/2006" }}</span>
+            <div class="card-category">
                 {{ with .Params.categories }}
-                <span class="category-tag">{{ index . 0 }}</span>
+                <span class="category-badge">{{ index . 0 | humanize }}</span>
                 {{ end }}
             </div>
-            <p>{{ .Summary | truncate 120 }}</p>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="card-excerpt">{{ .Summary | plainify | truncate 110 }}</p>
+            <div class="card-footer">
+                <span class="card-date">🕐 {{ .Lastmod.Format "02/01/2006" }}</span>
+                <a href="{{ .RelPermalink }}" class="card-link">Leer guía →</a>
+            </div>
         </article>
         {{ end }}
     </div>
     
-    {{ template "_internal/pagination.html" . }}
+    <div class="pagination-wrapper">
+        {{ template "_internal/pagination.html" . }}
+    </div>
 </section>
 {{ end }}

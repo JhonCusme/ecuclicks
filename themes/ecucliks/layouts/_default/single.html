@@ -1,32 +1,46 @@
+{{ define "title" }}{{ .Title }} | {{ site.Title }}{{ end }}
 {{ define "main" }}
 <article class="post">
     <header class="post-header">
+        <div class="post-breadcrumb">
+            <a href="{{ "/" | relURL }}">Inicio</a>
+            {{ with .Params.categories }}
+            <span class="sep">/</span>
+            <a href="{{ "/categories/" | relURL }}{{ index . 0 | urlize }}">{{ index . 0 | humanize }}</a>
+            {{ end }}
+        </div>
         <h1>{{ .Title }}</h1>
         <div class="post-meta">
-            <span class="date">Última actualización: {{ .Lastmod.Format "02/01/2006" }}</span>
+            <span class="meta-item">🕐 Última actualización: <strong>{{ .Lastmod.Format "02 Jan 2006" }}</strong></span>
             {{ with .Params.categories }}
-            <span class="category">Categoría: <a href="{{ "/categories/" | relURL }}{{ index . 0 | urlize }}">{{ index . 0 }}</a></span>
+            <span class="meta-item">📂 <a href="{{ "/categories/" | relURL }}{{ index . 0 | urlize }}">{{ index . 0 | humanize }}</a></span>
             {{ end }}
         </div>
     </header>
 
-    <div class="toc-container widget">
-        <h3>Tabla de Contenidos</h3>
-        {{ .TableOfContents }}
+    <div class="toc-container">
+        <details open>
+            <summary><strong>📑 Tabla de Contenidos</strong></summary>
+            {{ .TableOfContents }}
+        </details>
     </div>
 
-    <!-- AdSense In-Content Placeholder (Top) -->
-    <div class="ad-placeholder ad-content">
-        <!-- Espacio reservado para AdSense (Debajo del TOC) -->
+    <!-- AdSense In-Content (Top) -->
+    <div class="ad-slot ad-content">
+        <!-- AdSense debajo del TOC -->
     </div>
 
     <div class="post-content">
         {{ .Content }}
     </div>
 
-    <!-- AdSense In-Content Placeholder (Bottom) -->
-    <div class="ad-placeholder ad-content">
-        <!-- Espacio reservado para AdSense (Al final del artículo) -->
+    <!-- AdSense In-Content (Bottom) -->
+    <div class="ad-slot ad-content">
+        <!-- AdSense al final del artículo -->
+    </div>
+
+    <div class="post-footer-nav">
+        <p class="share-prompt">¿Te resultó útil esta guía? ¡Compártela con quien la necesite!</p>
     </div>
 </article>
 {{ end }}
