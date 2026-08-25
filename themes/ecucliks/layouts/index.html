@@ -1,20 +1,15 @@
-{{ define "title" }}{{ site.Title }} - Guías y Trámites de Ecuador{{ end }}
-{{ define "main" }}
+{{ define "title" }}Ecuclicks - Guías y Trámites de Ecuador{{ end }}
+{{ define "body" }}
+
 <section class="home-hero">
-    <div class="hero-content">
-        <h1>Tu guía paso a paso para <span class="hero-highlight">trámites en Ecuador</span></h1>
-        <p class="hero-subtitle">Requisitos, costos y pasos actualizados para cédula, RUC, IESS, licencias, pasaporte y más. Todo en un solo lugar.</p>
-        <div class="hero-search">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Tu guía paso a paso para <span class="hero-highlight">trámites en Ecuador</span></h1>
+            <p class="hero-subtitle">Requisitos, costos y pasos actualizados para cédula, RUC, IESS, licencias, pasaporte y más.</p>
             <div class="search-categories">
                 {{ range $name, $taxonomy := site.Taxonomies.categories }}
                 <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}" class="category-pill">
-                    {{ if eq $name "identificacion" }}🪪{{ end }}
-                    {{ if eq $name "impuestos" }}🧾{{ end }}
-                    {{ if eq $name "seguridad social" }}🏥{{ end }}
-                    {{ if eq $name "vehiculos" }}🚗{{ end }}
-                    {{ if eq $name "extranjeria" }}✈️{{ end }}
-                    {{ if eq $name "empresas" }}🏢{{ end }}
-                    {{ if eq $name "otros" }}📋{{ end }}
+                    {{ if eq $name "identificacion" }}🪪{{ else if eq $name "impuestos" }}🧾{{ else if eq $name "seguridad social" }}🏥{{ else if eq $name "vehiculos" }}🚗{{ else if eq $name "extranjeria" }}✈️{{ else if eq $name "empresas" }}🏢{{ else }}📋{{ end }}
                     {{ $name | humanize }}
                 </a>
                 {{ end }}
@@ -23,14 +18,13 @@
     </div>
 </section>
 
-<!-- AdSense In-Content -->
-<div class="ad-slot ad-content-home">
-    <!-- AdSense Banner debajo del hero -->
+<div class="ad-slot ad-content-home container">
+    <!-- AdSense debajo del hero -->
 </div>
 
-<section class="recent-guides">
+<section class="recent-guides container">
     <div class="section-header">
-        <h2>📖 Guías Más Recientes</h2>
+        <h2>Guías Más Recientes</h2>
         <p>Trámites y procedimientos actualizados para que no pierdas tiempo</p>
     </div>
     <div class="guide-grid">
@@ -43,7 +37,7 @@
                 {{ end }}
             </div>
             <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            <p class="card-excerpt">{{ .Summary | plainify | truncate 110 }}</p>
+            <p class="card-excerpt">{{ .Summary | plainify | truncate 120 }}</p>
             <div class="card-footer">
                 <span class="card-date">🕐 {{ .Lastmod.Format "02/01/2006" }}</span>
                 <a href="{{ .RelPermalink }}" class="card-link">Leer guía →</a>
@@ -56,4 +50,5 @@
         {{ template "_internal/pagination.html" . }}
     </div>
 </section>
+
 {{ end }}

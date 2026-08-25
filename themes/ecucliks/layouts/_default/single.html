@@ -1,46 +1,69 @@
 {{ define "title" }}{{ .Title }} | {{ site.Title }}{{ end }}
-{{ define "main" }}
-<article class="post">
-    <header class="post-header">
-        <div class="post-breadcrumb">
-            <a href="{{ "/" | relURL }}">Inicio</a>
-            {{ with .Params.categories }}
-            <span class="sep">/</span>
-            <a href="{{ "/categories/" | relURL }}{{ index . 0 | urlize }}">{{ index . 0 | humanize }}</a>
-            {{ end }}
+{{ define "body" }}
+<div class="container layout-wrapper">
+    <div class="content-area">
+        <article class="post">
+            <header class="post-header">
+                <nav class="post-breadcrumb" aria-label="Breadcrumb">
+                    <a href="{{ "/" | relURL }}">Inicio</a>
+                    {{ with .Params.categories }}
+                    <span class="sep">›</span>
+                    <a href="{{ "/categories/" | relURL }}{{ index . 0 | urlize }}">{{ index . 0 | humanize }}</a>
+                    {{ end }}
+                </nav>
+                <h1>{{ .Title }}</h1>
+                <div class="post-meta">
+                    <span class="meta-item">🕐 Actualizado: <strong>{{ .Lastmod.Format "02 Jan 2006" }}</strong></span>
+                    {{ with .Params.categories }}
+                    <span class="meta-item">📂 <a href="{{ "/categories/" | relURL }}{{ index . 0 | urlize }}">{{ index . 0 | humanize }}</a></span>
+                    {{ end }}
+                </div>
+            </header>
+
+            <div class="toc-container">
+                <details open>
+                    <summary><strong>📑 Tabla de Contenidos</strong></summary>
+                    {{ .TableOfContents }}
+                </details>
+            </div>
+
+            <div class="ad-slot ad-content">
+                <!-- AdSense debajo del TOC -->
+            </div>
+
+            <div class="post-content">
+                {{ .Content }}
+            </div>
+
+            <div class="ad-slot ad-content">
+                <!-- AdSense al final del artículo -->
+            </div>
+
+            <div class="post-share">
+                <p>¿Te resultó útil esta guía? ¡Compártela con quien la necesite!</p>
+            </div>
+        </article>
+    </div>
+    
+    <aside class="sidebar">
+        <div class="widget categories-widget">
+            <h3>Categorías</h3>
+            <ul>
+                {{ range $name, $taxonomy := site.Taxonomies.categories }}
+                <li>
+                    <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">
+                        {{ if eq $name "identificacion" }}<span class="cat-icon">🪪</span>{{ else if eq $name "impuestos" }}<span class="cat-icon">🧾</span>{{ else if eq $name "seguridad social" }}<span class="cat-icon">🏥</span>{{ else if eq $name "vehiculos" }}<span class="cat-icon">🚗</span>{{ else if eq $name "extranjeria" }}<span class="cat-icon">✈️</span>{{ else if eq $name "empresas" }}<span class="cat-icon">🏢</span>{{ else }}<span class="cat-icon">📋</span>{{ end }}
+                        <span class="cat-name">{{ $name | humanize }}</span>
+                        <span class="cat-count">{{ len $taxonomy }}</span>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
         </div>
-        <h1>{{ .Title }}</h1>
-        <div class="post-meta">
-            <span class="meta-item">🕐 Última actualización: <strong>{{ .Lastmod.Format "02 Jan 2006" }}</strong></span>
-            {{ with .Params.categories }}
-            <span class="meta-item">📂 <a href="{{ "/categories/" | relURL }}{{ index . 0 | urlize }}">{{ index . 0 | humanize }}</a></span>
-            {{ end }}
+        
+        <div class="ad-slot ad-sidebar">
+            <!-- AdSense Sidebar -->
         </div>
-    </header>
-
-    <div class="toc-container">
-        <details open>
-            <summary><strong>📑 Tabla de Contenidos</strong></summary>
-            {{ .TableOfContents }}
-        </details>
-    </div>
-
-    <!-- AdSense In-Content (Top) -->
-    <div class="ad-slot ad-content">
-        <!-- AdSense debajo del TOC -->
-    </div>
-
-    <div class="post-content">
-        {{ .Content }}
-    </div>
-
-    <!-- AdSense In-Content (Bottom) -->
-    <div class="ad-slot ad-content">
-        <!-- AdSense al final del artículo -->
-    </div>
-
-    <div class="post-footer-nav">
-        <p class="share-prompt">¿Te resultó útil esta guía? ¡Compártela con quien la necesite!</p>
-    </div>
-</article>
+    </aside>
+</div>
 {{ end }}
