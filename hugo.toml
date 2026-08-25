@@ -3,6 +3,7 @@ languageCode = "es-ec"
 title = "Ecucliks - Guías y Trámites de Ecuador"
 theme = "ecucliks"
 paginate = 10
+enableRobotsTXT = true
 
 [taxonomies]
   category = "categories"
