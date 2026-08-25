@@ -1,0 +1,106 @@
+{{ define "title" }}{{ .Title }} | {{ site.Title }}{{ end }}
+{{ define "body" }}
+<div class="container layout-wrapper">
+    <div class="content-area" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+        <article class="post">
+            <header class="post-header">
+                <h1>{{ .Title }}</h1>
+                {{ if .Description }}<p style="color: var(--text-light);">{{ .Description }}</p>{{ end }}
+            </header>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Escribe lo que buscas (ej. Cédula, RUC)..." autofocus>
+                <div id="searchResults" class="guide-grid" style="margin-top: 30px;">
+                    <!-- Los resultados aparecerán aquí -->
+                </div>
+            </div>
+
+        </article>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+        let indexData = [];
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+
+        fetch('/index.json')
+            .then(response => response.json())
+            .then(data => {
+                indexData = data;
+                if(query) {
+                    searchInput.value = query;
+                    performSearch(query);
+                }
+            });
+
+        searchInput.addEventListener('input', function() {
+            performSearch(this.value);
+        });
+
+        function performSearch(query) {
+            searchResults.innerHTML = '';
+            if (query.length < 2) return;
+            
+            const lowerQuery = query.toLowerCase();
+            const results = indexData.filter(item => 
+                item.title.toLowerCase().includes(lowerQuery) || 
+                item.content.toLowerCase().includes(lowerQuery)
+            );
+
+            if(results.length === 0) {
+                searchResults.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--text-light);">No se encontraron resultados para "'+ query +'". Intenta con otras palabras.</p>';
+                return;
+            }
+
+            results.forEach(item => {
+                const article = document.createElement('article');
+                article.className = 'guide-card';
+                
+                // Asegurar que summary es un string
+                let summaryText = "";
+                if (item.summary) {
+                    summaryText = item.summary.substring(0, 120) + "...";
+                }
+
+                article.innerHTML = `
+                    <div class="card-content">
+                        <h3><a href="${item.url}">${item.title}</a></h3>
+                        <p class="card-excerpt">${summaryText}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="${item.url}" class="card-link">Leer guía →</a>
+                    </div>
+                `;
+                searchResults.appendChild(article);
+            });
+        }
+    });
+</script>
+
+<style>
+    .search-container input {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+        border: 2px solid var(--border);
+        border-radius: var(--radius-sm);
+        outline: none;
+        transition: border-color var(--transition);
+        margin-bottom: 20px;
+        font-family: inherit;
+    }
+    .search-container input:focus {
+        border-color: var(--primary);
+    }
+    .guide-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+</style>
+{{ end }}
