@@ -39,8 +39,28 @@
                 <!-- AdSense al final del artículo -->
             </div>
 
+            <!-- Artículos Relacionados -->
+            {{ $related := .Site.RegularPages.Related . | first 3 }}
+            {{ with $related }}
+            <div class="related-posts" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);">
+                <h3 style="margin-bottom: 20px;">También te puede interesar:</h3>
+                <div class="guide-grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px;">
+                    {{ range . }}
+                    <article class="guide-card" style="padding: 15px;">
+                        <h4 style="font-size: 1.1rem; margin-bottom: 10px;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+                        <a href="{{ .RelPermalink }}" class="card-link" style="font-size: 0.9rem;">Leer más →</a>
+                    </article>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+
             <div class="post-share">
-                <p>¿Te resultó útil esta guía? ¡Compártela con quien la necesite!</p>
+                <p>¿Te resultó útil esta guía? ¡Compártela!</p>
+                <div class="share-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
+                    <a href="https://api.whatsapp.com/send?text={{ .Title | urlquery }}%20{{ .Permalink }}" target="_blank" class="btn-whatsapp" style="padding: 8px 15px; font-size: 0.9rem; width: auto; background-color: #25D366; color: white;">Compartir en WhatsApp</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="btn-whatsapp" style="padding: 8px 15px; font-size: 0.9rem; width: auto; background-color: #1877F2; color: white;">Compartir en Facebook</a>
+                </div>
             </div>
         </article>
     </div>
