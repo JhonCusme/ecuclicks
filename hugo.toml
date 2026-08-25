@@ -12,8 +12,8 @@ paginate = 10
   description = "Portal de guías paso a paso para realizar trámites en Ecuador (SRI, Registro Civil, ANT, IESS y más)."
   author = "Ecucliks"
   
-  # AdSense Client ID (Dejar en blanco hasta tener aprobación)
-  adsense_client_id = ""
+  # AdSense Client ID
+  adsense_client_id = "ca-pub-7223873610943022"
 
 [markup.tableOfContents]
   endLevel = 3
