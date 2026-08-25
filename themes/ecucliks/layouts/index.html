@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="home-hero">
+    <h1>Bienvenido a Ecucliks</h1>
+    <p>{{ site.Params.description }}</p>
+</section>
+
+<section class="recent-guides">
+    <h2>Guías Más Recientes</h2>
+    <div class="guide-grid">
+        {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+        {{ range $paginator.Pages }}
+        <article class="guide-card">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <div class="meta">
+                <span>Actualizado: {{ .Lastmod.Format "02/01/2006" }}</span>
+                {{ with .Params.categories }}
+                <span class="category-tag">{{ index . 0 }}</span>
+                {{ end }}
+            </div>
+            <p>{{ .Summary | truncate 120 }}</p>
+        </article>
+        {{ end }}
+    </div>
+    
+    {{ template "_internal/pagination.html" . }}
+</section>
+{{ end }}

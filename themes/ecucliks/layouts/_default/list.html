@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="archive">
+    <header class="archive-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}
+        <div class="archive-description">{{ . }}</div>
+        {{ end }}
+    </header>
+
+    <div class="guide-grid">
+        {{ range .Pages }}
+        <article class="guide-card">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <div class="meta">
+                <span>Actualizado: {{ .Lastmod.Format "02/01/2006" }}</span>
+            </div>
+            <p>{{ .Summary | truncate 120 }}</p>
+        </article>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

@@ -1,0 +1,6 @@
+topics:
+  # Ejemplo de cómo agregar un tema nuevo
+  # El script creará automáticamente el archivo content/finanzas/como-abrir-cuenta-bancaria.md
+  - category: "finanzas"
+    slug: "como-abrir-cuenta-bancaria"
+    title: "Cómo abrir una cuenta bancaria básica en Ecuador"
