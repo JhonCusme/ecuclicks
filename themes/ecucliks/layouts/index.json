@@ -1,0 +1,12 @@
+[
+  {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}
+  {{- $len := len $pages -}}
+  {{- range $index, $page := $pages -}}
+  {
+    "title": {{ $page.Title | jsonify }},
+    "url": {{ $page.RelPermalink | jsonify }},
+    "content": {{ $page.Plain | jsonify }},
+    "summary": {{ $page.Summary | plainify | jsonify }}
+  }{{ if ne (add $index 1) $len }},{{ end }}
+  {{- end -}}
+]

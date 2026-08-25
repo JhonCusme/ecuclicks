@@ -1,0 +1,15 @@
+{{ define "title" }}{{ .Title }} | {{ site.Title }}{{ end }}
+{{ define "body" }}
+<div class="container layout-wrapper">
+    <div class="content-area" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+        <article class="post">
+            <header class="post-header">
+                <h1>{{ .Title }}</h1>
+            </header>
+            <div class="post-content">
+                {{ .Content }}
+            </div>
+        </article>
+    </div>
+</div>
+{{ end }}

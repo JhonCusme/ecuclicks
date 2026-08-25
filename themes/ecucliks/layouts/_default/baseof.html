@@ -7,9 +7,10 @@
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
     <link rel="canonical" href="{{ .Permalink }}">
     
-    <!-- Open Graph & Twitter Cards for Social Media -->
+    <!-- SEO & Structured Data -->
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
+    {{ partial "jsonld.html" . }}
     
     <link rel="icon" type="image/jpeg" href="{{ "favicon.jpg" | relURL }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,6 +33,7 @@
             <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="{{ "/" | relURL }}">Inicio</a></li>
+                    <li><a href="{{ "/buscar/" | relURL }}">🔍 Buscar</a></li>
                     {{ range $name, $taxonomy := site.Taxonomies.categories }}
                     <li><a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">{{ $name | humanize }}</a></li>
                     {{ end }}
@@ -55,11 +57,10 @@
                     <p>Tu portal de guías y trámites en Ecuador. Información sobre Registro Civil, SRI, IESS, ANT y más.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Categorías</h4>
+                    <h4>Ecuclicks</h4>
                     <ul>
-                        {{ range $name, $taxonomy := site.Taxonomies.categories }}
-                        <li><a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">{{ $name | humanize }}</a></li>
-                        {{ end }}
+                        <li><a href="{{ "/sobre-nosotros/" | relURL }}">Sobre Nosotros</a></li>
+                        <li><a href="{{ "/contacto/" | relURL }}">Contacto</a></li>
                     </ul>
                 </div>
             </div>
