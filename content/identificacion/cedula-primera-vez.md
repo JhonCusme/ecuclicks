@@ -1,8 +1,8 @@
 ---
 title: "Cómo sacar la cédula de identidad por primera vez en Ecuador"
 description: "Conoce los requisitos y pasos para obtener tu primera cédula de identidad ecuatoriana en el Registro Civil."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-02-14T20:43:44-05:00
+lastmod: 2026-02-14T20:43:44-05:00
 categories: ["Identificacion"]
 ---
 

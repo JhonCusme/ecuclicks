@@ -1,8 +1,8 @@
 ---
 title: "Cómo hacer el trámite de migración/cambio de domicilio electoral"
 description: "Actualiza tu lugar de residencia para sufragar más cerca de tu casa."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-06-08T11:55:59-05:00
+lastmod: 2026-06-08T11:55:59-05:00
 categories: ["Identificacion"]
 ---
 

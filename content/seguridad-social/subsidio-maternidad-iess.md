@@ -1,8 +1,8 @@
 ---
 title: "Cómo solicitar el subsidio por maternidad/paternidad en el IESS"
 description: "Conoce los requisitos para cobrar el subsidio económico por descanso de maternidad."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-03-27T14:07:55-05:00
+lastmod: 2026-03-27T14:07:55-05:00
 categories: ["Seguridad Social"]
 ---
 

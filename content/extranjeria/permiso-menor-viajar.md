@@ -1,8 +1,8 @@
 ---
 title: "Cómo sacar permiso de menor de edad para viajar"
 description: "Autorización notarial de salida del país para niños, niñas y adolescentes ecuatorianos."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-07-22T20:42:15-05:00
+lastmod: 2026-07-22T20:42:15-05:00
 categories: ["Extranjeria"]
 ---
 

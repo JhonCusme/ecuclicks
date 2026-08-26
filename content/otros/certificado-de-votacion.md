@@ -1,8 +1,8 @@
 ---
 title: "Cómo solicitar el certificado de votación"
 description: "Pasos para obtener tu certificado de votación en el CNE, por pérdida o por no haber votado."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-01-06T19:39:45-05:00
+lastmod: 2026-01-06T19:39:45-05:00
 categories: ["Otros"]
 ---
 

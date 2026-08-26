@@ -8,6 +8,7 @@
     <link rel="canonical" href="{{ .Permalink }}">
     
     <!-- SEO & Structured Data -->
+    <meta property="og:image" content="{{ "images/og-image.jpg" | absURL }}">
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
     {{ partial "jsonld.html" . }}
@@ -32,8 +33,13 @@
             </button>
             <nav class="main-nav" id="mainNav">
                 <ul>
+                    <li>
+                        <form action="{{ "/buscar/" | relURL }}" method="GET" style="display: flex; align-items: center;">
+                            <input type="text" name="q" placeholder="Buscar trámite..." style="padding: 5px 10px; border-radius: 15px; border: 1px solid var(--border); outline: none; font-size: 0.9rem;">
+                            <button type="submit" style="background: none; border: none; cursor: pointer; margin-left: 5px;">🔍</button>
+                        </form>
+                    </li>
                     <li><a href="{{ "/" | relURL }}">Inicio</a></li>
-                    <li><a href="{{ "/buscar/" | relURL }}">🔍 Buscar</a></li>
                     {{ range $name, $taxonomy := site.Taxonomies.categories }}
                     <li><a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">{{ $name | humanize }}</a></li>
                     {{ end }}

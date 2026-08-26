@@ -1,8 +1,8 @@
 ---
 title: "Cómo obtener el certificado de antecedentes penales"
 description: "Saca tu récord policial o certificado de antecedentes gratuitamente en línea."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-07-07T18:30:58-05:00
+lastmod: 2026-07-07T18:30:58-05:00
 categories: ["Identificacion"]
 ---
 

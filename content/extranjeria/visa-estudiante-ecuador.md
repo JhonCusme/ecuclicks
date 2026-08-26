@@ -1,8 +1,8 @@
 ---
 title: "Cómo obtener la visa de estudiante en Ecuador (para extranjeros)"
 description: "Conoce cómo solicitar la visa de residencia temporal para estudiar en el país."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-01-28T19:55:28-05:00
+lastmod: 2026-01-28T19:55:28-05:00
 categories: ["Extranjeria"]
 ---
 

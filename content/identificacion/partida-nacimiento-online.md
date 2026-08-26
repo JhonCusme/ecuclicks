@@ -1,8 +1,8 @@
 ---
 title: "Cómo obtener la partida de nacimiento / certificado de Registro Civil online"
 description: "Paso a paso para descargar tu certificado de nacimiento firmado electrónicamente por el Registro Civil."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-03-27T10:16:08-05:00
+lastmod: 2026-03-27T10:16:08-05:00
 categories: ["Identificacion"]
 ---
 

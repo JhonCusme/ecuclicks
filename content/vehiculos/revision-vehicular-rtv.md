@@ -1,8 +1,8 @@
 ---
 title: "Cómo hacer el trámite de revisión vehicular (RTV / matriculación)"
 description: "Guía para cumplir con la Revisión Técnica Vehicular obligatoria."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-05-30T20:29:10-05:00
+lastmod: 2026-05-30T20:29:10-05:00
 categories: ["Vehiculos"]
 ---
 

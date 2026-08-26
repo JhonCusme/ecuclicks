@@ -1,8 +1,8 @@
 ---
 title: "Cómo obtener el certificado laboral / de aportaciones al IESS"
 description: "Descarga tu historial laboral completo validado por el IESS."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-08-16T12:54:28-05:00
+lastmod: 2026-08-16T12:54:28-05:00
 categories: ["Seguridad Social"]
 ---
 

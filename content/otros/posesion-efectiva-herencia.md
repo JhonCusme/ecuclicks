@@ -1,8 +1,8 @@
 ---
 title: "Cómo hacer el trámite de sucesión / posesión efectiva"
 description: "Pasos para reclamar y registrar los bienes de una persona fallecida a favor de sus herederos."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-02-15T15:24:53-05:00
+lastmod: 2026-02-15T15:24:53-05:00
 categories: ["Otros"]
 ---
 

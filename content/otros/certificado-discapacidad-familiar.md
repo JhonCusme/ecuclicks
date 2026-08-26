@@ -1,8 +1,8 @@
 ---
 title: "Cómo obtener el certificado de sustituto de discapacidad"
 description: "Permite que un familiar asuma los derechos laborales de una persona con discapacidad severa."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-08-13T15:00:37-05:00
+lastmod: 2026-08-13T15:00:37-05:00
 categories: ["Otros"]
 ---
 

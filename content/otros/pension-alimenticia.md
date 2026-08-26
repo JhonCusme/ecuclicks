@@ -1,8 +1,8 @@
 ---
 title: "Cómo hacer el trámite de pensión alimenticia"
 description: "Pasos legales para iniciar una demanda y fijar la pensión alimenticia a favor de menores de edad."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-03-12T14:49:23-05:00
+lastmod: 2026-03-12T14:49:23-05:00
 categories: ["Otros"]
 ---
 

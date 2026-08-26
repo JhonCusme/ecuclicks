@@ -1,8 +1,8 @@
 ---
 title: "Cómo tramitar el permiso de trabajo para extranjeros en Ecuador"
 description: "Requisitos legales para que un ciudadano extranjero pueda laborar legalmente."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-08-03T15:41:44-05:00
+lastmod: 2026-08-03T15:41:44-05:00
 categories: ["Extranjeria"]
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Cómo crear una empresa o sociedad (Superintendencia de Compañías)"
 description: "Guía para constituir tu empresa S.A., Cía. Ltda., o SAS (Sociedad por Acciones Simplificada) en línea."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-04-05T17:56:04-05:00
+lastmod: 2026-04-05T17:56:04-05:00
 categories: ["Empresas"]
 ---
 

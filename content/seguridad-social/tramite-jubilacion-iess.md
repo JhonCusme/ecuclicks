@@ -1,8 +1,8 @@
 ---
 title: "Cómo hacer el trámite de jubilación en el IESS"
 description: "Requisitos y pasos para jubilarte por vejez tras cumplir los años de aporte y edad."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-02-12T19:56:02-05:00
+lastmod: 2026-02-12T19:56:02-05:00
 categories: ["Seguridad social"]
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Cómo pagar o consultar multas de tránsito (ANT)"
 description: "Aprende cómo verificar si tienes infracciones de tránsito y dónde pagarlas."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-08-20T12:49:16-05:00
+lastmod: 2026-08-20T12:49:16-05:00
 categories: ["Vehiculos"]
 ---
 

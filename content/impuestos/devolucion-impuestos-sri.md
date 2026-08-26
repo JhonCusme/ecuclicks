@@ -1,8 +1,8 @@
 ---
 title: "Cómo hacer el reclamo o devolución de impuestos"
 description: "Solicita al SRI la devolución del IVA (tercera edad/discapacidad) o de saldos a favor de Renta."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-07-27T14:37:21-05:00
+lastmod: 2026-07-27T14:37:21-05:00
 categories: ["Impuestos"]
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Cómo obtener el carnet de discapacidad"
 description: "Proceso del Ministerio de Salud Pública (MSP) para la calificación y carnetización."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-07-04T15:50:52-05:00
+lastmod: 2026-07-04T15:50:52-05:00
 categories: ["Otros"]
 ---
 

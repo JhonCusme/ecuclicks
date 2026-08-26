@@ -1,8 +1,8 @@
 ---
 title: "Cómo apostillar documentos en Ecuador (Cancillería)"
 description: "Legaliza tus documentos ecuatorianos para que tengan validez en el exterior."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-01-02T12:06:09-05:00
+lastmod: 2026-01-02T12:06:09-05:00
 categories: ["Extranjeria"]
 ---
 

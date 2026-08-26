@@ -1,8 +1,8 @@
 ---
 title: "Cómo pagar la matrícula vehicular"
 description: "Proceso anual de pago de matrícula y revisión técnica vehicular según la calendarización."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-05-04T11:46:27-05:00
+lastmod: 2026-05-04T11:46:27-05:00
 categories: ["Vehiculos"]
 ---
 

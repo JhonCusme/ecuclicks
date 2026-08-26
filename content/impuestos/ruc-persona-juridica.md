@@ -1,8 +1,8 @@
 ---
 title: "Cómo obtener el RUC como persona jurídica / empresa"
 description: "Guía para inscribir el RUC de una sociedad o compañía legalmente constituida."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-01-28T08:22:45-05:00
+lastmod: 2026-01-28T08:22:45-05:00
 categories: ["Impuestos"]
 ---
 

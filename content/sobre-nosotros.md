@@ -5,6 +5,17 @@ date: 2026-08-25
 layout: "page"
 ---
 
+## Conoce a Nuestro Equipo
+
+<div style="display: flex; align-items: center; gap: 20px; background: var(--bg-card); padding: 20px; border-radius: var(--radius-lg); margin-bottom: 30px; box-shadow: var(--shadow);">
+    <img src="/images/jhon-cusme.jpg" alt="Jhon Cusme, Fundador de Ecuclicks" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
+    <div>
+        <h3 style="margin-bottom: 5px;">Jhon Cusme</h3>
+        <p style="color: var(--text-light); margin-bottom: 10px; font-weight: 500;">Fundador & Editor Principal</p>
+        <p style="margin: 0;">Con años de experiencia enfrentando la burocracia, Jhon decidió crear Ecuclicks para ayudar a otros ecuatorianos a ahorrar tiempo. Él investiga, verifica y redacta las guías paso a paso para asegurar que sean fáciles de entender para todos.</p>
+    </div>
+</div>
+
 ## Nuestra Misión
 
 En **Ecuclicks** creemos que realizar trámites en Ecuador no debería ser un dolor de cabeza. Nuestra misión es traducir el complejo lenguaje burocrático en guías paso a paso, simples, claras y directas, para que cualquier ciudadano pueda realizar sus gestiones sin perder tiempo ni dinero.

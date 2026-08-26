@@ -1,8 +1,8 @@
 ---
 title: "Cómo afiliarse al IESS como voluntario"
 description: "Descubre cómo obtener seguro de salud y aportes para la jubilación afiliándote voluntariamente al IESS."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-02-09T12:49:44-05:00
+lastmod: 2026-02-09T12:49:44-05:00
 categories: ["Seguridad social"]
 ---
 

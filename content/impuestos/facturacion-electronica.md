@@ -1,8 +1,8 @@
 ---
 title: "Cómo facturar electrónicamente (requisitos SRI)"
 description: "Pasos para habilitar la facturación electrónica obligatoria para Pymes y profesionales."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-08-06T17:03:59-05:00
+lastmod: 2026-08-06T17:03:59-05:00
 categories: ["Impuestos"]
 ---
 

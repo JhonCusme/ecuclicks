@@ -37,7 +37,7 @@
         <article class="guide-card">
             <div class="card-category">
                 {{ with .Params.categories }}
-                <span class="category-badge">{{ index . 0 | humanize }}</span>
+                <span class="category-badge cat-{{ index . 0 | urlize }}">{{ index . 0 | humanize }}</span>
                 {{ end }}
             </div>
             <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>

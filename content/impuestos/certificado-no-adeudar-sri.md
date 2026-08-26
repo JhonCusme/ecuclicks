@@ -1,8 +1,8 @@
 ---
 title: "Cómo obtener el certificado de no adeudar al fisco"
 description: "Descarga tu certificado de cumplimiento tributario del SRI."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-05-26T16:07:54-05:00
+lastmod: 2026-05-26T16:07:54-05:00
 categories: ["Impuestos"]
 ---
 

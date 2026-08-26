@@ -1,8 +1,8 @@
 ---
 title: "Cómo hacer el trámite de divorcio por mutuo consentimiento"
 description: "Conoce los requisitos y el proceso rápido para divorciarse de mutuo acuerdo en Ecuador."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-05-16T10:36:47-05:00
+lastmod: 2026-05-16T10:36:47-05:00
 categories: ["Otros"]
 ---
 

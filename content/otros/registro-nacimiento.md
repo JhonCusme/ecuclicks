@@ -1,8 +1,8 @@
 ---
 title: "Cómo registrar el nacimiento de un bebé (Registro Civil)"
 description: "Inscribe a tu recién nacido en el Registro Civil para obtener su identidad."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-01-31T20:13:05-05:00
+lastmod: 2026-01-31T20:13:05-05:00
 categories: ["Otros"]
 ---
 

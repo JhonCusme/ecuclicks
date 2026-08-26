@@ -1,8 +1,8 @@
 ---
 title: "Cómo sacar la licencia de conducir tipo B"
 description: "Requisitos, costos y escuelas aprobadas para obtener tu licencia sportman."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-05-23T17:36:21-05:00
+lastmod: 2026-05-23T17:36:21-05:00
 categories: ["Vehiculos"]
 ---
 

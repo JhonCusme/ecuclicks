@@ -1,8 +1,8 @@
 ---
 title: "Cómo sacar el RUC (persona natural) en el SRI"
 description: "Aprende a inscribirte en el Registro Único de Contribuyentes como persona natural de forma presencial o en línea."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-01-07T14:03:26-05:00
+lastmod: 2026-01-07T14:03:26-05:00
 categories: ["Impuestos"]
 ---
 

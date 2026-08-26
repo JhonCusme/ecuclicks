@@ -1,8 +1,8 @@
 ---
 title: "Cómo renovar la cédula de identidad"
 description: "Pasos y requisitos para renovar tu cédula ecuatoriana por pérdida, robo o expiración."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-02-19T11:58:19-05:00
+lastmod: 2026-02-19T11:58:19-05:00
 categories: ["Identificacion"]
 ---
 

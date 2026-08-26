@@ -1,8 +1,8 @@
 ---
 title: "Requisitos para la visa de residencia en Ecuador"
 description: "Conoce los tipos de visas, requisitos y proceso para residir legalmente en el país."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-07-24T18:58:19-05:00
+lastmod: 2026-07-24T18:58:19-05:00
 categories: ["Extranjeria"]
 ---
 

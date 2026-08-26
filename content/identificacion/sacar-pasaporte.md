@@ -1,8 +1,8 @@
 ---
 title: "Requisitos para sacar el pasaporte en Ecuador"
 description: "Guía completa para obtener tu pasaporte ecuatoriano ordinario por primera vez o renovación."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-05-29T20:52:50-05:00
+lastmod: 2026-05-29T20:52:50-05:00
 categories: ["Identificacion"]
 ---
 

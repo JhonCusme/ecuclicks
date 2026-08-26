@@ -1,8 +1,8 @@
 ---
 title: "Cómo solicitar el bono de desarrollo humano (MIES)"
 description: "Información sobre cómo acceder a los subsidios económicos del Gobierno Ecuatoriano."
-date: 2026-08-25T18:03:57-05:00
-lastmod: 2026-08-25T18:03:57-05:00
+date: 2026-04-05T15:46:46-05:00
+lastmod: 2026-04-05T15:46:46-05:00
 categories: ["Seguridad Social"]
 ---
 

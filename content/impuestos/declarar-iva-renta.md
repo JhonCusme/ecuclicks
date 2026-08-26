@@ -1,8 +1,8 @@
 ---
 title: "Cómo declarar el IVA y el Impuesto a la Renta (guía básica)"
 description: "Conoce los conceptos básicos, plazos y cómo usar el SRI en Línea para tus declaraciones."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-06-18T19:08:17-05:00
+lastmod: 2026-06-18T19:08:17-05:00
 categories: ["Impuestos"]
 ---
 

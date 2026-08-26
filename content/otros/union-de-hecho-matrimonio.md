@@ -1,8 +1,8 @@
 ---
 title: "Cómo hacer el trámite de unión de hecho o matrimonio civil"
 description: "Conoce los requisitos para legalizar tu relación de pareja en el Registro Civil."
-date: 2026-08-24T19:19:32-05:00
-lastmod: 2026-08-24T19:19:32-05:00
+date: 2026-07-06T12:48:27-05:00
+lastmod: 2026-07-06T12:48:27-05:00
 categories: ["Otros"]
 ---
 
