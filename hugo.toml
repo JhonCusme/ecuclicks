@@ -30,3 +30,21 @@ enableRobotsTXT = true
   endLevel = 3
   ordered = false
   startLevel = 2
+
+[menu]
+  [[menu.main]]
+    name = "Inicio"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Trámites"
+    url = "/categories/"
+    weight = 2
+  [[menu.main]]
+    name = "Sobre Nosotros"
+    url = "/sobre-nosotros/"
+    weight = 3
+  [[menu.main]]
+    name = "Contacto"
+    url = "/contacto/"
+    weight = 4
