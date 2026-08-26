@@ -58,8 +58,8 @@
             <div class="post-share">
                 <p>¿Te resultó útil esta guía? ¡Compártela!</p>
                 <div class="share-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
-                    <a href="https://api.whatsapp.com/send?text={{ .Title | urlquery }}%20{{ .Permalink }}" target="_blank" class="btn-whatsapp" style="padding: 8px 15px; font-size: 0.9rem; width: auto; background-color: #25D366; color: white;">Compartir en WhatsApp</a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="btn-whatsapp" style="padding: 8px 15px; font-size: 0.9rem; width: auto; background-color: #1877F2; color: white;">Compartir en Facebook</a>
+                    <a href="https://api.whatsapp.com/send?text={{ .Title | urlquery }}%20{{ .Permalink | urlquery }}" target="_blank" class="btn-whatsapp" style="padding: 8px 15px; font-size: 0.9rem; width: auto; background-color: #25D366; color: white;">Compartir en WhatsApp</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}" target="_blank" class="btn-whatsapp" style="padding: 8px 15px; font-size: 0.9rem; width: auto; background-color: #1877F2; color: white;">Compartir en Facebook</a>
                 </div>
             </div>
         </article>
