@@ -19,23 +19,20 @@ El sitio es un portal informativo sobre trámites en Ecuador, construido con **H
 
 ---
 
-## 🎯 Próximos Pasos (Para la siguiente sesión)
+## 🎯 Tareas Pendientes (Próxima Sesión)
 
-Cuando retomemos el proyecto, estas son las prioridades a verificar o implementar:
+Actualmente estamos **en pausa esperando la aprobación de Google AdSense**. Cuando retomemos el proyecto, estas son las prioridades absolutas:
 
-1. **Revisar el Estado de Google AdSense**
-   - Validar si Google ya aprobó el sitio. Si ya fue aprobado, configurar bloques de anuncios manuales (In-Article Ads) en lugar de depender solo de los anuncios automáticos.
-
-2. **Integrar Analíticas (Google Analytics 4 / Search Console)**
+1. **Integrar Analíticas (Google Analytics 4 / Search Console)**
    - Configurar y añadir el script de GA4 para medir el tráfico real del sitio.
-   - Revisar en Google Search Console si hay errores de indexación o páginas no encontradas (404).
+   - Revisar en Google Search Console si hay errores de indexación.
 
-3. **Mejoras de Rendimiento (PageSpeed Insights)**
-   - Pasar el sitio por Google PageSpeed Insights y hacer ajustes finos (lazy loading de imágenes, compresión adicional de CSS) si es necesario para alcanzar el 100/100.
+2. **Expansión de Contenido (Herramientas Interactivas)**
+   - Programar calculadoras web interactivas (Ej: "Calculadora de multas de tránsito" o "Calculadora de liquidación laboral") usando JavaScript para atraer tráfico orgánico masivo y aumentar la retención de usuarios.
 
-4. **Expansión de Contenido (Módulos Especiales)**
-   - Crear herramientas interactivas si es posible (Ej: "Calculadora de multas de tránsito" o "Calculadora de liquidación laboral") usando JavaScript del lado del cliente para atraer tráfico orgánico masivo.
+3. **Revisar el Estado de Google AdSense**
+   - Una vez aprobados, configurar bloques de anuncios manuales (In-Article Ads) estratégicamente.
 
 ---
 
-**Nota para la IA:** Lee este documento al inicio de la próxima sesión para recuperar el contexto completo del proyecto Ecuclicks.
+**Nota para la IA:** Lee este documento al inicio de la próxima sesión para recuperar el contexto completo del proyecto Ecuclicks y comenzar directamente con los puntos 1 y 2.
