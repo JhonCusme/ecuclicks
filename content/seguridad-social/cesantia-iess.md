@@ -2,7 +2,7 @@
 title: "Cómo hacer el trámite de cesantía en el IESS"
 description: "Aprende cómo retirar tus fondos de cesantía cuando te quedas sin empleo."
 date: 2026-03-18T13:28:27-05:00
-lastmod: 2026-03-18T13:28:27-05:00
+lastmod: 2026-10-02T04:26:25-05:00
 categories: ["Seguridad Social"]
 ---
 

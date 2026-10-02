@@ -2,7 +2,7 @@
 title: "Cómo hacer el trámite de nacionalización vehicular"
 description: "Conoce los lineamientos generales sobre la importación de vehículos al Ecuador."
 date: 2026-05-19T10:14:58-05:00
-lastmod: 2026-05-19T10:14:58-05:00
+lastmod: 2026-10-02T04:36:11-05:00
 categories: ["Vehiculos"]
 ---
 

@@ -1,25 +1,42 @@
 import os
 import glob
+import random
 import yaml
-from datetime import datetime
+from datetime import datetime, timedelta
 import re
 
 CONTENT_DIR = "content"
 TOPICS_FILE = "scripts/topics.yaml"
+EXCLUDED_FILES = {"buscar.md", "contacto.md", "sobre-nosotros.md"}
 
 def update_lastmod_dates():
-    """Updates the lastmod date in all markdown files in content directory."""
+    """Updates the lastmod date in a realistic, randomized subset of guides for natural SEO growth."""
     print("Updating lastmod dates for SEO freshness...")
-    md_files = glob.glob(os.path.join(CONTENT_DIR, "**", "*.md"), recursive=True)
+    all_files = glob.glob(os.path.join(CONTENT_DIR, "**", "*.md"), recursive=True)
     
-    current_time = datetime.now().strftime('%Y-%m-%dT%H:%M:%S-05:00')
+    # Exclude root static pages
+    guide_files = [f for f in all_files if os.path.basename(f) not in EXCLUDED_FILES]
     
-    for file_path in md_files:
+    if not guide_files:
+        print("No guide files found.")
+        return
+
+    # Select 3 to 6 guides randomly so we don't modify everything at once (simulates genuine organic updates)
+    sample_size = min(len(guide_files), random.randint(3, 6))
+    selected_files = random.sample(guide_files, sample_size)
+    print(f"Selected {len(selected_files)} guides to update lastmod.")
+
+    now = datetime.now()
+    for file_path in selected_files:
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.read()
         
+        # Add random minutes/seconds offset for natural appearance
+        offset_minutes = random.randint(5, 180)
+        file_time = (now - timedelta(minutes=offset_minutes)).strftime('%Y-%m-%dT%H:%M:%S-05:00')
+        
         # Regex to update lastmod in frontmatter
-        new_content = re.sub(r"lastmod:\s*.*", f"lastmod: {current_time}", content)
+        new_content = re.sub(r"lastmod:\s*.*", f"lastmod: {file_time}", content)
         
         if new_content != content:
             with open(file_path, "w", encoding="utf-8") as f:
@@ -36,7 +53,8 @@ def create_placeholders_for_new_topics():
     with open(TOPICS_FILE, "r", encoding="utf-8") as f:
         topics_data = yaml.safe_load(f)
 
-    if not topics_data or "topics" not in topics_data:
+    if not topics_data or not topics_data.get("topics"):
+        print("No new topics to create.")
         return
 
     current_time = datetime.now().strftime('%Y-%m-%dT%H:%M:%S-05:00')

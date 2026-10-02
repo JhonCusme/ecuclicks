@@ -2,7 +2,7 @@
 title: "Cómo sacar el título de propiedad / traspaso vehicular"
 description: "Legaliza la compra-venta de tu carro usado transfiriendo el título de dominio."
 date: 2026-07-11T16:29:12-05:00
-lastmod: 2026-07-11T16:29:12-05:00
+lastmod: 2026-10-02T05:56:30-05:00
 categories: ["Vehiculos"]
 ---
 

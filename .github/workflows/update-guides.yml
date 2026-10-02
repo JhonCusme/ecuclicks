@@ -6,6 +6,9 @@ on:
     - cron: '0 0 1,15 * *'
   workflow_dispatch: # Permite ejecución manual
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -16,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: Configurar Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
@@ -35,7 +38,7 @@ jobs:
           
           # Solo hacer commit si hay cambios
           if ! git diff-index --quiet HEAD; then
-            git commit -m "chore: mantenimiento automático SEO y actualización de lastmod [skip ci]"
+            git commit -m "chore: mantenimiento automático SEO y actualización de lastmod"
             git push
           else
             echo "No hay cambios para hacer commit"
