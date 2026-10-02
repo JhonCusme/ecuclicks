@@ -1,1 +1,4 @@
 User-agent: *
+Allow: /
+
+Sitemap: https://ecuclicks.online/sitemap.xml

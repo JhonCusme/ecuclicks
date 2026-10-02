@@ -28,49 +28,98 @@
         const urlParams = new URLSearchParams(window.location.search);
         const query = urlParams.get('q');
 
-        fetch('/index.json')
-            .then(response => response.json())
+        const normalize = function(str) {
+            if (!str) return '';
+            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        };
+
+        const escapeHTML = function(str) {
+            if (!str) return '';
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        };
+
+        const slugify = function(text) {
+            return normalize(text).replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
+        };
+
+        fetch('{{ "index.json" | relURL }}')
+            .then(response => {
+                if (!response.ok) throw new Error('No se pudo cargar el índice');
+                return response.json();
+            })
             .then(data => {
                 indexData = data;
-                if(query) {
+                if (query) {
                     searchInput.value = query;
                     performSearch(query);
                 }
+            })
+            .catch(err => {
+                searchResults.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary); padding: 20px;">No se pudo cargar el índice de búsqueda. Por favor recarga la página.</p>';
             });
 
         searchInput.addEventListener('input', function() {
             performSearch(this.value);
         });
 
-        function performSearch(query) {
+        function performSearch(rawQuery) {
             searchResults.innerHTML = '';
-            if (query.length < 2) return;
+            const trimmed = rawQuery.trim();
+            if (trimmed.length < 2) return;
             
-            const lowerQuery = query.toLowerCase();
-            const results = indexData.filter(item => 
-                item.title.toLowerCase().includes(lowerQuery) || 
-                item.content.toLowerCase().includes(lowerQuery)
-            );
+            const words = normalize(trimmed).split(/\s+/).filter(w => w.length > 0);
+            if (words.length === 0) return;
 
-            if(results.length === 0) {
-                searchResults.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--text-light);">No se encontraron resultados para "'+ query +'". Intenta con otras palabras.</p>';
+            const scoredResults = [];
+
+            indexData.forEach(item => {
+                const normTitle = normalize(item.title);
+                const normContent = normalize(item.content);
+                const normSummary = normalize(item.summary);
+
+                const allWordsMatch = words.every(w => normTitle.includes(w) || normContent.includes(w) || normSummary.includes(w));
+                
+                if (allWordsMatch) {
+                    let score = 0;
+                    const normQuery = normalize(trimmed);
+                    if (normTitle.includes(normQuery)) score += 100;
+                    words.forEach(w => {
+                        if (normTitle.includes(w)) score += 25;
+                        if (normSummary.includes(w)) score += 5;
+                    });
+                    scoredResults.push({ item, score });
+                }
+            });
+
+            scoredResults.sort((a, b) => b.score - a.score);
+
+            if (scoredResults.length === 0) {
+                searchResults.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--text-light); padding: 40px 0;">No se encontraron resultados para "<strong>' + escapeHTML(trimmed) + '</strong>". Intenta con palabras clave como <em>cédula, ruc, iess, licencia, pasaporte</em>.</p>';
                 return;
             }
 
-            results.forEach(item => {
+            scoredResults.forEach(({ item }) => {
                 const article = document.createElement('article');
                 article.className = 'guide-card';
                 
-                // Asegurar que summary es un string
                 let summaryText = "";
                 if (item.summary) {
-                    summaryText = item.summary.substring(0, 120) + "...";
+                    summaryText = item.summary.substring(0, 130) + "...";
+                }
+
+                let categoryHTML = "";
+                if (item.category) {
+                    const catSlug = slugify(item.category);
+                    categoryHTML = `<div class="card-category"><span class="category-badge cat-${catSlug}">${escapeHTML(item.category)}</span></div>`;
                 }
 
                 article.innerHTML = `
+                    ${categoryHTML}
                     <div class="card-content">
-                        <h3><a href="${item.url}">${item.title}</a></h3>
-                        <p class="card-excerpt">${summaryText}</p>
+                        <h3><a href="${item.url}">${escapeHTML(item.title)}</a></h3>
+                        <p class="card-excerpt">${escapeHTML(summaryText)}</p>
                     </div>
                     <div class="card-footer">
                         <a href="${item.url}" class="card-link">Leer guía →</a>

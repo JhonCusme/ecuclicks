@@ -1,6 +1,7 @@
 baseURL = "https://ecuclicks.online"
 languageCode = "es-ec"
-title = "Ecucliks - Guías y Trámites de Ecuador"
+defaultContentLanguage = "es"
+title = "Ecuclicks - Guías y Trámites de Ecuador"
 theme = "ecucliks"
 paginate = 10
 enableRobotsTXT = true
@@ -16,11 +17,18 @@ enableRobotsTXT = true
 
 [taxonomies]
   category = "categories"
-  tag = "tags"
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+  [[related.indices]]
+    name = "categories"
+    weight = 100
 
 [params]
   description = "Portal de guías paso a paso para realizar trámites en Ecuador (SRI, Registro Civil, ANT, IESS y más)."
-  author = "Ecucliks"
+  author = "Ecuclicks"
   mainSections = ["identificacion", "impuestos", "seguridad-social", "vehiculos", "extranjeria", "empresas", "otros"]
   
   # AdSense Client ID

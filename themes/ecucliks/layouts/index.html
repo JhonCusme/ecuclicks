@@ -8,7 +8,7 @@
             <p class="hero-subtitle">Requisitos, costos y pasos actualizados para cédula, RUC, IESS, licencias, pasaporte y más.</p>
             <div class="search-categories">
                 {{ range $name, $taxonomy := site.Taxonomies.categories }}
-                <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}" class="category-pill">
+                <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}/" class="category-pill">
                     {{ if eq $name "identificacion" }}🪪{{ else if eq $name "impuestos" }}🧾{{ else if eq $name "seguridad social" }}🏥{{ else if eq $name "vehiculos" }}🚗{{ else if eq $name "extranjeria" }}✈️{{ else if eq $name "empresas" }}🏢{{ else }}📋{{ end }}
                     {{ $name | humanize }}
                 </a>

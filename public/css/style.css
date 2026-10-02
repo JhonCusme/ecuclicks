@@ -619,81 +619,103 @@ a:hover { color: var(--primary-dark); }
 
 @media (max-width: 480px) {
     .home-hero h1 { font-size: 1.4rem; }
-    .hero-subtitle { font-size: 0.86rem; }
-    .search-categories { gap: 6px; }
-    .category-pill { font-size: 0.74rem; padding: 5px 12px; }
-    .guide-card { padding: 18px; }
-    .guide-card h3 { font-size: 0.92rem; }
-    .logo-text { font-size: 1.2rem; }
-    .post-header h1 { font-size: 1.25rem; }
+
+/* WhatsApp Promotional */
+.whatsapp-widget {
+    background: linear-gradient(135deg, #128C7E, #25D366);
+    color: white;
+    border-radius: var(--radius);
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
 }
- 
- / *   W h a t s A p p   P r o m o c i o n a l   * /  
- . w h a t s a p p - w i d g e t   {  
-         b a c k g r o u n d :   l i n e a r - g r a d i e n t ( 1 3 5 d e g ,   # 1 2 8 C 7 E ,   # 2 5 D 3 6 6 ) ;  
-         c o l o r :   w h i t e ;  
-         b o r d e r - r a d i u s :   v a r ( - - r a d i u s - l g ) ;  
-         p a d d i n g :   2 5 p x   2 0 p x ;  
-         t e x t - a l i g n :   c e n t e r ;  
-         b o x - s h a d o w :   v a r ( - - s h a d o w ) ;  
- }  
- . w h a t s a p p - w i d g e t   h 3   {  
-         c o l o r :   w h i t e ;  
-         m a r g i n - b o t t o m :   1 0 p x ;  
-         f o n t - s i z e :   1 . 3 r e m ;  
- }  
- . w h a t s a p p - w i d g e t   p   {  
-         f o n t - s i z e :   0 . 9 5 r e m ;  
-         m a r g i n - b o t t o m :   2 0 p x ;  
-         o p a c i t y :   0 . 9 ;  
- }  
- . b t n - w h a t s a p p   {  
-         d i s p l a y :   i n l i n e - f l e x ;  
-         a l i g n - i t e m s :   c e n t e r ;  
-         j u s t i f y - c o n t e n t :   c e n t e r ;  
-         g a p :   8 p x ;  
-         b a c k g r o u n d - c o l o r :   w h i t e ;  
-         c o l o r :   # 1 2 8 C 7 E ;  
-         p a d d i n g :   1 2 p x   2 0 p x ;  
-         b o r d e r - r a d i u s :   3 0 p x ;  
-         f o n t - w e i g h t :   7 0 0 ;  
-         t e x t - d e c o r a t i o n :   n o n e ;  
-         t r a n s i t i o n :   t r a n s f o r m   v a r ( - - t r a n s i t i o n ) ;  
-         w i d t h :   1 0 0 % ;  
- }  
- . b t n - w h a t s a p p : h o v e r   {  
-         t r a n s f o r m :   s c a l e ( 1 . 0 5 ) ;  
-         c o l o r :   # 1 2 8 C 7 E ;  
- }  
-  
- . f l o a t i n g - w h a t s a p p   {  
-         p o s i t i o n :   f i x e d ;  
-         b o t t o m :   3 0 p x ;  
-         r i g h t :   3 0 p x ;  
-         w i d t h :   6 0 p x ;  
-         h e i g h t :   6 0 p x ;  
-         b a c k g r o u n d - c o l o r :   # 2 5 d 3 6 6 ;  
-         c o l o r :   # f f f ;  
-         b o r d e r - r a d i u s :   5 0 % ;  
-         d i s p l a y :   f l e x ;  
-         j u s t i f y - c o n t e n t :   c e n t e r ;  
-         a l i g n - i t e m s :   c e n t e r ;  
-         f o n t - s i z e :   3 0 p x ;  
-         b o x - s h a d o w :   2 p x   2 p x   1 0 p x   r g b a ( 0 , 0 , 0 , 0 . 2 ) ;  
-         z - i n d e x :   1 0 0 ;  
-         t r a n s i t i o n :   t r a n s f o r m   v a r ( - - t r a n s i t i o n ) ;  
- }  
- . f l o a t i n g - w h a t s a p p : h o v e r   {  
-         t r a n s f o r m :   s c a l e ( 1 . 1 ) ;  
-         c o l o r :   # f f f ;  
- }  
-  
- / *   C o l o r e s   p o r   C a t e g o r i a   * /  
- . c a t - i d e n t i f i c a c i o n   {   b a c k g r o u n d - c o l o r :   # e 3 f 2 f d   ! i m p o r t a n t ;   c o l o r :   # 1 5 6 5 c 0   ! i m p o r t a n t ;   b o r d e r :   1 p x   s o l i d   # b b d e f b ;   }  
- . c a t - i m p u e s t o s   {   b a c k g r o u n d - c o l o r :   # f f f 8 e 1   ! i m p o r t a n t ;   c o l o r :   # f 5 7 f 1 7   ! i m p o r t a n t ;   b o r d e r :   1 p x   s o l i d   # f f e c b 3 ;   }  
- . c a t - s e g u r i d a d - s o c i a l   {   b a c k g r o u n d - c o l o r :   # e 8 f 5 e 9   ! i m p o r t a n t ;   c o l o r :   # 2 e 7 d 3 2   ! i m p o r t a n t ;   b o r d e r :   1 p x   s o l i d   # c 8 e 6 c 9 ;   }  
- . c a t - v e h i c u l o s   {   b a c k g r o u n d - c o l o r :   # f c e 4 e c   ! i m p o r t a n t ;   c o l o r :   # c 2 1 8 5 b   ! i m p o r t a n t ;   b o r d e r :   1 p x   s o l i d   # f 8 b b d 0 ;   }  
- . c a t - e x t r a n j e r i a   {   b a c k g r o u n d - c o l o r :   # f 3 e 5 f 5   ! i m p o r t a n t ;   c o l o r :   # 6 a 1 b 9 a   ! i m p o r t a n t ;   b o r d e r :   1 p x   s o l i d   # e 1 b e e 7 ;   }  
- . c a t - e m p r e s a s   {   b a c k g r o u n d - c o l o r :   # e 0 f 7 f a   ! i m p o r t a n t ;   c o l o r :   # 0 0 8 3 8 f   ! i m p o r t a n t ;   b o r d e r :   1 p x   s o l i d   # b 2 e b f 2 ;   }  
- . c a t - o t r o s   {   b a c k g r o u n d - c o l o r :   # f 5 f 5 f 5   ! i m p o r t a n t ;   c o l o r :   # 4 2 4 2 4 2   ! i m p o r t a n t ;   b o r d e r :   1 p x   s o l i d   # e 0 e 0 e 0 ;   }  
- 
+.whatsapp-widget h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+.whatsapp-widget p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: white;
+    color: #128C7E;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform var(--transition);
+    width: 100%;
+}
+.btn-whatsapp:hover {
+    transform: scale(1.03);
+    color: #128C7E;
+}
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+    transition: transform var(--transition-spring);
+}
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Social Share Buttons */
+.share-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.btn-share {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-radius: var(--radius-xs);
+    color: #fff !important;
+    text-decoration: none;
+    transition: transform var(--transition), opacity var(--transition);
+}
+.btn-share:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+    text-decoration: none;
+}
+.btn-share-wa {
+    background-color: #25D366;
+}
+.btn-share-fb {
+    background-color: #1877F2;
+}
+
+/* Colores por Categoría */
+.cat-identificacion { background-color: #e3f2fd !important; color: #1565c0 !important; border: 1px solid #bbdefb; }
+.cat-impuestos { background-color: #fff8e1 !important; color: #f57f17 !important; border: 1px solid #ffecb3; }
+.cat-seguridad-social { background-color: #e8f5e9 !important; color: #2e7d32 !important; border: 1px solid #c8e6c9; }
+.cat-vehiculos { background-color: #fce4ec !important; color: #c2185b !important; border: 1px solid #f8bbd0; }
+.cat-extranjeria { background-color: #f3e5f5 !important; color: #6a1b9a !important; border: 1px solid #e1bee7; }
+.cat-empresas { background-color: #e0f7fa !important; color: #00838f !important; border: 1px solid #b2ebf2; }
+.cat-otros { background-color: #f5f5f5 !important; color: #424242 !important; border: 1px solid #e0e0e0; }

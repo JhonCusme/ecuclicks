@@ -1,5 +1,7 @@
 {{- $index := slice -}}
 {{- range (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
-  {{- $index = $index | append (dict "title" .Title "url" .RelPermalink "content" .Plain "summary" (.Summary | plainify)) -}}
+  {{- $cat := "" -}}
+  {{- with .Params.categories }}{{ $cat = index . 0 }}{{ end -}}
+  {{- $index = $index | append (dict "title" .Title "url" .RelPermalink "content" .Plain "summary" (.Summary | plainify) "category" $cat) -}}
 {{- end -}}
 {{- $index | jsonify -}}

@@ -18,7 +18,7 @@
                 <article class="guide-card">
                     <div class="card-category">
                         {{ with .Params.categories }}
-                        <span class="category-badge">{{ index . 0 | humanize }}</span>
+                        <span class="category-badge cat-{{ index . 0 | urlize }}">{{ index . 0 | humanize }}</span>
                         {{ end }}
                     </div>
                     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
@@ -41,7 +41,7 @@
             <ul>
                 {{ range $name, $taxonomy := site.Taxonomies.categories }}
                 <li>
-                    <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">
+                    <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}/">
                         {{ if eq $name "identificacion" }}<span class="cat-icon">🪪</span>{{ else if eq $name "impuestos" }}<span class="cat-icon">🧾</span>{{ else if eq $name "seguridad social" }}<span class="cat-icon">🏥</span>{{ else if eq $name "vehiculos" }}<span class="cat-icon">🚗</span>{{ else if eq $name "extranjeria" }}<span class="cat-icon">✈️</span>{{ else if eq $name "empresas" }}<span class="cat-icon">🏢</span>{{ else }}<span class="cat-icon">📋</span>{{ end }}
                         <span class="cat-name">{{ $name | humanize }}</span>
                         <span class="cat-count">{{ len $taxonomy }}</span>
